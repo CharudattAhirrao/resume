@@ -19,10 +19,12 @@
 
                 <!-- Links  -->
                 <div class="w-full flex flex-col md:flex-row print:flex-row md:items-center print:items-start justify-center md:divide-x-2 print:divide-x-2">
-                    <div class="flex flex-row items-center gap-1 px-2 py-1 text-nowrap" v-for="(link, index) of links" :key="index">
-                        <span><i :class="link.icon"></i></span>
-                        <a :href="link.href" :target="link.target" class="hover:text-blue-600 hover:underline"> {{link.text}} </a>
-                    </div>
+                    <a :href="link.url" :target="link.target" rel="noopener noreferrer" class="flex flex-row items-center gap-1 px-2 py-1 text-nowrap cursor-pointer hover:text-blue-600 hover:underline" :key="index" v-for="(link, index) of links">
+                        <span>
+                            <i :class="link.icon"></i>
+                        </span>
+                        <span>{{ link.text }}</span>
+                    </a>
                 </div>
             </div>
 
