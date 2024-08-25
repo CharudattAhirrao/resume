@@ -13,13 +13,13 @@
         <main id="resume" class="container p-8 print:p-0 text-xs print:text-[0.60rem] mx-auto">
             <!-- Header  -->
             <div class="space-y-4">
-                <div class="text-center">
+                <div class="text-start md:text-center print:text-center">
                     <h1 class="text-xl font-semibold">{{name}}</h1>
                 </div>
 
                 <!-- Links  -->
-                <div class="w-full flex flex-row items-center justify-center divide-x-2">
-                    <div class="flex flex-row items-center gap-1 px-2 text-nowrap" v-for="(link, index) of links" :key="index">
+                <div class="w-full flex flex-col md:flex-row print:flex-row md:items-center print:items-start justify-center md:divide-x-2 print:divide-x-2">
+                    <div class="flex flex-row items-center gap-1 px-2 py-1 text-nowrap" v-for="(link, index) of links" :key="index">
                         <span><i :class="link.icon"></i></span>
                         <a :href="link.href" :target="link.target" class="hover:text-blue-600 hover:underline"> {{link.text}} </a>
                     </div>
@@ -44,12 +44,16 @@
                     <div class="w-full h-[1px] bg-slate-200"></div>
                 </div>
                 <div class="space-y-1">
-                    <div v-for="(desc, type) of skills" class="flex flex-row items-start gap-2">
+                    <div v-for="(desc, type) of skills" class="flex flex-col md:flex-row print:flex-row items-start gap-2">
                         <div class="flex flex-row items-center gap-2">
-                            <div class="size-1.5 bg-blue-600 rounded-full"></div>
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill size-1 fill-blue-600" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8" />
+                                </svg>
+                            </div>
                             <span class="font-medium text-nowrap">{{type}} :</span>
                         </div>
-                        <div class="">{{desc}}</div>
+                        <div class="my-2 md:my-0 print:my-0">{{desc}}</div>
                     </div>
                 </div>
             </div>
@@ -64,14 +68,18 @@
                 <div class="" v-for="exp of experience">
                     <div class="my-2">
                         <div class="font-semibold text-base">{{exp.role}}</div>
-                        <div class="font-semibold flex flex-row items-center justify-between">
+                        <div class="font-semibold flex flex-col md:flex-row print:flex-row md:items-center print:items-center justify-between">
                             <div class="">{{exp.company}}</div>
-                            <div class="">{{exp.from}} - {{exp.to}}</div>
+                            <div class="my-2 md:my-0 print:my-0">{{exp.from}} - {{exp.to}}</div>
                         </div>
                     </div>
                     <!-- Description  -->
-                    <div class="flex flex-row items-start gap-2 leading-relaxed" v-for="desc of exp.description">
-                        <div class="size-1.5 bg-blue-600 rounded-full my-auto"></div>
+                    <div class="flex flex-row items-start gap-x-2" v-for="desc of exp.description">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-circle-fill size-1 fill-blue-600 mt-1" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                            </svg>
+                        </div>
                         <span class="">{{desc}}</span>
                     </div>
                 </div>
@@ -86,9 +94,9 @@
                 </div>
                 <div class="" v-for="edu of education">
                     <div class="text-base font-semibold">{{edu.college}}</div>
-                    <div class="flex flex-row items-center justify-between">
+                    <div class="flex flex-col md:flex-row print:flex-row md:items-center print:items-center justify-between">
                         <div class="">{{edu.branch}}</div>
-                        <div class="font-semibold">{{edu.date}}</div>
+                        <div class="font-semibold my-2 md:my-1 print:my-1">{{edu.date}}</div>
                     </div>
                 </div>
             </div>
@@ -121,7 +129,7 @@
                     <div class="text-base font-medium text-blue-600">Certificates</div>
                     <div class="w-full h-[1px] bg-slate-200"></div>
                 </div>
-                <div class="flex flex-row items-center gap-4">
+                <div class="flex flex-col md:flex-row print:flex-row md:items-center print:items-center gap-4">
                     <div class="" v-for="(cert, index) of certificates">
                         <span class="font-semibold">{{cert.name}} </span>
                         <span v-show="cert.link" class="text-blue-600 flex flex-row items-center gap-2">
