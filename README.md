@@ -1,4 +1,4 @@
-# My Resume - Vue.js Application
+# Resume
 
 Welcome to my resume repository! This project showcases my resume as an interactive Vue.js application. It's built using HTML, CSS, and JavaScript with Vue.js included via CDN.
 
