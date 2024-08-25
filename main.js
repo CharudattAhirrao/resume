@@ -30,7 +30,7 @@ const resume = Vue.createApp({
             ],
             summary: "An accomplished software developer with 1+ years of experience. Proficient in Javascript, Python, and various web development technologies, with expertise in frontend development using ReactJs, Redux, NextJs, and Tailwind, and backend development using NodeJs, Firebase, MongoDB. Skilled in designing visually appealing user interfaces using Figma and well-versed in the Software Development Life Cycle (SDLC) process. Seeking an opportunity to begin my career and contribute to organizational growth while enhancing my skills.",
             skills: {
-                languages: "JavaScript | Python | PowerShell",
+                Languages: "JavaScript | Python | PowerShell",
                 Technologies: "NodeJS (Server-side, Client-side & CLIs) | ReactJs | NextJS | VueJS | Express | MySQL | MongoDB | Tailwind.",
                 "Macro Skills": " Frontend | Backend | Full-Stack | Clean Code | OOPS | Team Handling | Design | UI/UX | English, Hindi, Marathi.",
             },
@@ -54,7 +54,7 @@ const resume = Vue.createApp({
                 {
                     name: "Portfolio & Blog Showcase",
                     description: "Developed a professional portfolio website using Next.js, Redux, and Tailwind CSS, featuring a blog section powered by Sanity.io. Crafted a seamless user experience with dynamic content and intuitive navigation. Hosted on Vercel for superior performance and reliability.",
-                    link: "Hello",
+                    link: "",
                 },
                 {
                     name: "E-commerce Web Application",
