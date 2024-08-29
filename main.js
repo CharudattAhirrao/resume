@@ -64,8 +64,8 @@ const resume = Vue.createApp({
             ],
             certificates: [
                 {
-                    name: "Javascript (Basic)",
-                    link: "https://www.hackerrank.com/certificates/19c5d06434e2",
+                    name: "Javascript (Intermediate)",
+                    link: "https://www.hackerrank.com/certificates/78b3a48d6c6e",
                 },
                 {
                     name: "React (Basic)",
